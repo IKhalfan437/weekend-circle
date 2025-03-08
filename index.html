@@ -1,49 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Weekend Circle</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1 class="main-title">
-                <span class="title-line title-line-1">THE</span>
-                <span class="title-line title-line-2">Weekend</span>
-                <span class="title-line title-line-3">CIRCLE</span>
-            </h1>
-        </header>
+/* Design System */
+:root {
+    --vibrant-blue: #0066cc;
+    --sunshine-yellow: #ffd700;
+    --alert-red: #ff4444;
+    --deep-gray: #333333;
+    --clean-white: #f9f9f9;
+}
 
-        <main class="content">
-            <div class="cta-section">
-                <h2 class="cta-text">
-                    JOIN US FOR ACTIVITIES<br>
-                    AND FUN EVERY<br>
-                    SATURDAY!
-                </h2>
-            </div>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            <div class="info-card">
-                <div class="circular-motif left"></div>
-                <div class="circular-motif right"></div>
-                <p class="highlight-info time">⏰ 11:00 AM TO 4:00 PM</p>
-                <p class="highlight-info address">
-                    📍 45 OVERLEA BLVD<br>
-                    TORONTO, ON M4H 1C3
-                </p>
-            </div>
-        </main>
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--clean-white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+}
 
-        <footer class="footer">
-            <div class="branding">
-                <span class="org-acronym">TNO</span>
-                <span class="org-fullname">THE NEIGHBOURHOOD ORGANIZATION</span>
-            </div>
-        </footer>
-    </div>
+.container {
+    max-width: 680px;
+    padding: 2rem;
+    text-align: center;
+}
 
-    <script src="scripts/script.js"></script>
-</body>
-</html>
+/* Hierarchical Typography */
+.main-title {
+    margin-bottom: 2.5rem;
+}
+
+.title-line {
+    display: block;
+    text-transform: uppercase;
+}
+
+.title-line-1 {
+    font-size: 2.4rem;
+    color: var(--deep-gray);
+    letter-spacing: 0.2em;
+    margin-bottom: -1rem;
+}
+
+.title-line-2 {
+    font-size: 4rem;
+    color: var(--vibrant-blue);
+    font-weight: 800;
+    margin: 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.title-line-3 {
+    font-size: 3.6rem;
+    color: var(--sunshine-yellow);
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Information Card with Circular Motifs */
+.info-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin: 3rem 0;
+    position: relative;
+    border: 3px solid var(--vibrant-blue);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.circular-motif {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--sunshine-yellow);
+    opacity: 0.2;
+}
+
+.circular-motif.left {
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.circular-motif.right {
+    right: -30px;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.highlight-info {
+    margin: 1.5rem 0;
+}
+
+.time {
+    font-size: 1.8rem;
+    color: var(--alert-red);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.address {
+    font-size: 1.4rem;
+    color: var(--deep-gray);
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Call to Action Section */
+.cta-text {
+    font-size: 2.2rem;
+    color: var(--vibrant-blue);
+    margin: 2.5rem 0;
+    line-height: 1.4;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Branding Footer */
+.branding {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--vibrant-blue);
+}
+
+.org-acronym {
+    display: block;
+    font-size: 2rem;
+    color: var(--vibrant-blue);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.org-fullname {
+    font-size: 1.2rem;
+    color: var(--deep-gray);
+    letter-spacing: 0.03em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .title-line-1 {
+        font-size: 2rem;
+    }
+
+    .title-line-2 {
+        font-size: 3rem;
+    }
+
+    .title-line-3 {
+        font-size: 2.4rem;
+    }
+
+    .cta-text {
+        font-size: 1.8rem;
+    }
+
+    .info-card {
+        padding: 2rem;
+        margin: 2rem 0;
+    }
+
+    .circular-motif {
+        width: 40px;
+        height: 40px;
+    }
+}
