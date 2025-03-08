@@ -1,0 +1,144 @@
+/* Flyer-Exact Design System */
+:root {
+    --primary-blue: #0055a5;
+    --accent-yellow: #ffd700;
+    --highlight-red: #e63946;
+    --neutral-gray: #4a4a4a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Hierarchical Typography */
+.main-title {
+    margin-bottom: 2.5rem;
+}
+
+.title-line {
+    display: block;
+    text-transform: uppercase;
+}
+
+.title-line-1 {
+    font-size: 2.2rem;
+    color: var(--neutral-gray);
+    letter-spacing: 0.15em;
+    margin-bottom: -0.5rem;
+}
+
+.title-line-2 {
+    font-size: 3.5rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin: 0.8rem 0;
+}
+
+.title-line-3 {
+    font-size: 3rem;
+    color: var(--accent-yellow);
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Information Card */
+.info-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    position: relative;
+    border: 2px solid var(--primary-blue);
+}
+
+.highlight-info {
+    margin: 1.2rem 0;
+}
+
+.time {
+    font-size: 1.7rem;
+    color: var(--highlight-red);
+    font-weight: 700;
+}
+
+.address {
+    font-size: 1.3rem;
+    color: var(--neutral-gray);
+    line-height: 1.5;
+}
+
+/* Call to Action */
+.cta-text {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin: 2rem 0;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+/* Branding Footer */
+.branding {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #ddd;
+}
+
+.org-acronym {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.org-fullname {
+    font-size: 1.1rem;
+    color: var(--neutral-gray);
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .title-line-1 {
+        font-size: 1.8rem;
+    }
+
+    .title-line-2 {
+        font-size: 2.8rem;
+    }
+
+    .title-line-3 {
+        font-size: 2.2rem;
+    }
+
+    .cta-text {
+        font-size: 1.6rem;
+    }
+
+    .time {
+        font-size: 1.4rem;
+    }
+}
