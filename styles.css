@@ -1,36 +1,51 @@
 /* Flyer-Exact Design System */
-:root {
-    --primary-blue: #0055a5;
-    --accent-yellow: #ffd700;
-    --highlight-red: #e63946;
-    --neutral-gray: #4a4a4a;
+    font-weight: 600;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Branding Footer */
+.branding {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #ddd;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.6;
+.org-acronym {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
-.container {
-    max-width: 600px;
-    padding: 2rem;
-    text-align: center;
+.org-fullname {
+    font-size: 1.1rem;
+    color: var(--neutral-gray);
+    letter-spacing: 0.5px;
 }
 
-/* Hierarchical Typography */
-.main-title {
-    margin-bottom: 2.5rem;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
 
-.title-line {
+    .title-line-1 {
+        font-size: 1.8rem;
+    }
+
+    .title-line-2 {
+        font-size: 2.8rem;
+    }
+
+    .title-line-3 {
+        font-size: 2.2rem;
+    }
+
+    .cta-text {
+        font-size: 1.6rem;
+    }
+
+    .time {
+        font-size: 1.4rem;
+    }
+}
