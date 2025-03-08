@@ -1,0 +1,36 @@
+/* Flyer-Exact Design System */
+:root {
+    --primary-blue: #0055a5;
+    --accent-yellow: #ffd700;
+    --highlight-red: #e63946;
+    --neutral-gray: #4a4a4a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Hierarchical Typography */
+.main-title {
+    margin-bottom: 2.5rem;
+}
+
+.title-line {
